@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShortLiens - Raccourcissez vos liens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="slogo.jpeg" alt="ShortLiens Logo" class="logo">
+    <h1>ShortLiens</h1>
+    <button id="themeToggle" class="theme-btn">🌙 Mode sombre</button>
+
+  </header>
+
+  <main>
+    <section class="shortener">
+      <h2>Raccourcissez votre lien</h2>
+      <input type="text" id="longUrl" placeholder="Collez votre lien ici (ex: https://...)" />
+      <button id="shortenBtn">Raccourcir</button>
+
+      <!-- Résultat ici -->
+      <div id="result" class="result" style="display:none;">
+        <p>Lien raccourci :</p>
+        <input type="text" id="shortUrl" readonly>
+        <button id="copyBtn">Copier</button>
+        <span id="copiedMsg" style="display:none;">✅ Lien copié !</span>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2 style="color: rgb(115, 101, 131);">FAQ </h2>
+
+      <p>💬 <strong style="color: rgb(7, 3, 255);">Comment fonctionne ShortLiens ?</strong><br>
+        Collez votre lien long, cliquez sur “Raccourcir” et obtenez un lien court à partager instantanément.
+      </p>
+
+      <p>⏳ <strong style="color: rgb(7, 3, 255);">Mes liens expirent-ils ?</strong><br>
+        Non, vos liens restent valides indéfiniment.
+      </p>
+
+      <p>💰 <strong style="color: rgb(7, 3, 255);">Puis-je utiliser ShortLiens gratuitement ?</strong><br>
+        Oui, 100 % gratuit et sans inscription.
+      </p>
+    </section>
+  </main>
+
+  <footer style="color: rgb(7, 3, 255);">
+    © 2025 ShortLiensDRC - Fait avec ❤️ par Hilaire Assumani
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
