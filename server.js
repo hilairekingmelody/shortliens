@@ -63,6 +63,17 @@ app.get("/:code", (req, res) => {
 app.listen(PORT, () =>
   console.log(`🚀 Serveur en ligne sur http://localhost:${PORT}`)
 );
+const fs = require("fs");
+const dbPath = path.resolve(__dirname, "database.sqlite");
+
+if (!fs.existsSync(dbPath)) {
+  fs.writeFileSync(dbPath, "");
+}
+const db = new sqlite3.Database(dbPath, (err) => {
+  if (err) console.error("Erreur DB:", err.message);
+  else console.log("✅ Base de données connectée.");
+});
+
 
 
 
