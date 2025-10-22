@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // --- Base de données ---
-const db = new sqlite3.Database('./database.db', (err) => {
+const db = new sqlite3.Database(path.resolve(__dirname, "database.sqlite"), (err) => {
   if (err) console.error('Erreur de connexion à la base de données :', err.message);
   else console.log('✅ Base de données connectée.');
 });
