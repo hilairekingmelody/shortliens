@@ -4,7 +4,7 @@ const { nanoid } = require('nanoid');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // --- Base de données ---
 const db = new sqlite3.Database('./database.db', (err) => {
